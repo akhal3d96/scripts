@@ -10,12 +10,13 @@
 
 FILE_NAME=${1:-"main.c"} 
 cat<<EOF > $FILE_NAME
-#include<stdio.h>
+#include <stdio.h>
 
 int main(int argc, char *argv[])
 {
-    char * msg = "Bootstrapped!"
-    printf("%s\n",msg);
-    return 0;
+  char * msg = "Bootstrapped!";
+  printf("%s\n",msg);
+
+  return 0;
 }
 EOF
