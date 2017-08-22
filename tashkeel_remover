@@ -4,19 +4,19 @@
 #: Author      : "Ahmed Khaled" <nemoload@aol.com>
 #: Version     : 1.0
 #: Description : Removes Arabic tashkeel characters
-#                from a text passed as an argument
+#                from a text passed as an argument.
 #: Options     : NONE
 
 # encoding: utf-8
 
 text = ARGV.join(' ')
 
-tashkel_unicode = %w[
+tashkeel_unicode = %W[
   \u0651 \u064E \u064B
   \u064F \u064C \u0650
   \u064D \u0652
 ]
 
-tashkel_unicode.each { |t| text.tr_s!(t, '') }
+tashkeel_unicode.each { |t| text.tr_s!(t, '') }
 
 print text, "\n"
