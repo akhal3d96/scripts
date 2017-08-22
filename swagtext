@@ -1,0 +1,18 @@
+#!/bin/env ruby
+#: Title       : swagtext
+#: Date        : 25-07-2017
+#: Author      : "Ahmed Khaled" <nemoload@aol.com>
+#: Version     : 1.0
+#: Description : takes a "text" as an argument and
+#                returns a "tExT".
+#: Options     : NONE
+
+text = ARGV.join(' ')
+ignore = true
+res = ''
+text.downcase.each_char do |c|
+  ignore ? res << c : res << c.capitalize
+  ignore = !ignore
+end
+
+print res, "\n"
