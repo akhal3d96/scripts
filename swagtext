@@ -11,7 +11,7 @@ text = ARGV.join(' ')
 ignore = true
 res = ''
 text.downcase.each_char do |c|
-  ignore ? res << c : res << c.capitalize
+  res.concat(ignore ? c : c.capitalize)
   ignore = !ignore
 end
 
