@@ -23,11 +23,11 @@ I have no problem in contributing and improving the quality of the scripts but k
       ```ruby
       #!/bin/env ruby
       
-      #: Title            : tashkeel_remover
-      #: Date            : 22-08-2017
-      #: Author         : "Ahmed Khaled" <nemoload@aol.com>
-      #: Version        : 1.0
-      #: Description : Removes Arabic tashkeel characters
-      #                        from a text passed as an argument.
+      #: Title         : tashkeel_remover
+      #: Date          : 22-08-2017
+      #: Author        : "Ahmed Khaled" <nemoload@aol.com>
+      #: Version       : 1.0
+      #: Description   : Removes Arabic tashkeel characters
+      #                     from a text passed as an argument.
       #: Options       : NONE
       ```
