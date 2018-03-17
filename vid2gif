@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#: Title       : mov2gif
+#: Date        : 22-08-2017
+#: Author      : "Ahmed Khaled" <nemoload@aol.com>
+#: Version     : 1.0
+#: Description : Convert a video to gif image.
+#: Options     : [2] 1: Input movie
+#                    2: Output image *.gif 
+
+palette="/tmp/palette.png"
+
+filters="fps=15,scale=506:-1:flags=lanczos"
+
+ffmpeg -v warning -i $1 -vf "$filters,palettegen" -y $palette
+ffmpeg -v warning -i $1 -i $palette -lavfi "$filters [x]; [x][1:v] paletteuse" -y $2

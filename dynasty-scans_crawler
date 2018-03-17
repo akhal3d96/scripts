@@ -1,13 +1,22 @@
 #!/usr/bin/env bash
 
+#: Title       : dynasty-scans_cralwer
+#: Date        : 26-1-2018
+#: Author      : "Ahmed Khaled" <nemoload@aol.com>
+#: Version     : 1.0
+#: Description : Downloads a whole chapter from dynasty-scans.com
+#                and pack it into a .cbz file
+#: Options     : [1] Takes one argument which is the url of teh chapter
+
 set -e
 
-mkdir manga
-cd manga
-curl -s $1 |\
+NAME=$(echo "$1" | grep -Eo 'ch[0-9]+')
+mkdir "$NAME"
+cd "$NAME" || exit 
+curl -s "$1" |\
     sed 's/,/\n/g'  |\
     perl -ne '/(system\/releases\/\d{3}\/\d{3}\/\d{3}\/(\d{3}|\d{3}-\d{3})\.(jpg|png))/ && print "https://dynasty-scans.com/$1\n"' |\
     xargs -I {} wget -nv -nc {}
 cd ..
-zip -r manga.cbz manga
-rm -r manga
+zip -r "$NAME.cbz" "$NAME"
+rm -r "$NAME"

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
+
 #: Title       : c-bootstrap
 #: Date        : 25-07-2017
 #: Author      : "Ahmed Khaled" <nemoload@aol.com>
 #: Version     : 1.0
 #: Description : Create a dummy *.c file with The Standard
 #                I/O library inclueded and the main function
-#: Options     : Takes an optional *.c file name. If it was empty
+#: Options     : [1] Takes an optional *.c file name. If it was empty
 #                the file would be named main.c (default)
 
 FILE_NAME=${1:-"main.c"} 

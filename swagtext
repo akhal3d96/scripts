@@ -1,11 +1,12 @@
 #!/bin/env ruby
+
 #: Title       : swagtext
 #: Date        : 25-07-2017
 #: Author      : "Ahmed Khaled" <nemoload@aol.com>
 #: Version     : 1.0
 #: Description : takes a "text" as an argument and
 #                returns a "tExT".
-#: Options     : NONE
+#: Options     : [1] The text to be swag'ed.
 
 text = ARGV.join(' ')
 ignore = true
