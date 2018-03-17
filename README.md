@@ -3,7 +3,7 @@ I have no problem in contributing and improving the quality of the scripts but k
 # Rules:
 1. The language **must** be scripted. No binaries.
 2. Here's the preferred languages in order of their preference:
-    1. Bash (For their maximum portability)
+    1. Bash (For its maximum portability)
     2. Ruby 
     3. Python
  3. Avoid external libraries (in case of Ruby and Python) or external programs (in case of Bash) as possible for maximum portability.
@@ -31,3 +31,4 @@ I have no problem in contributing and improving the quality of the scripts but k
       #                     from a text passed as an argument.
       #: Options       : NONE
       ```
+6. Don't add extension for the script (*.sh , *.rb , *.py)
